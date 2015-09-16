@@ -6,8 +6,8 @@ This repository features a collection of Vortex Tutorials showcasing various cap
 
 Current tutorials are as follows:
 
-#Vortex Tutorials (Tested with Vortex and Vortex Client 4.2.2)
-1. [Streaming Demo - Using Twitter and Kafka to stream all tweets containing specified keywords into Vector H database.](tutorials/streaming-demo/README.md)
+#Vortex Tutorials
+1. [Twitter Streaming Demo - Uses Twitter feeds, Apache Kafka, Actian Vortex and Tableu Desktop to showcase and end-to-end streaming use case.](tutorials/streaming-demo/README.md)
 1. [Spark Demo - Uses Spark and Vortex.](tutorials/spark-demo/README.md) 
 
 

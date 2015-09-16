@@ -1,6 +1,6 @@
 This repository features a collection of Vortex Tutorials showcasing various capabilities related to Use Cases, Analytics, Administration, Tuning and etc.
 
-![Actian Vortex](http://wwwcdn2.actian.com/wp-content/uploads/2014/06/icon-AAP-Express-Hadoop-300x194.jpg)
+![Actian Vortex](http://wwwcdn2.actian.com/wp-content/uploads/2015/03/vortex-img.jpg)
 
 
 Current tutorials are as follows:

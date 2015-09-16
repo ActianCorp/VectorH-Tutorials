@@ -7,7 +7,7 @@ This repository features a collection of Vortex Tutorials showcasing various cap
 Current tutorials are as follows:
 
 #Vortex Tutorials
-1. [Twitter Streaming Demo - Uses Twitter feeds, Apache Kafka, Actian Vortex and Tableu Desktop to showcase and end-to-end streaming use case.](tutorials/streaming-demo/README.md)
-1. [Spark Demo - Uses Spark and Vortex.](tutorials/spark-demo/README.md) 
+1. [Twitter Streaming Demo - Uses Twitter feeds, Apache Kafka, Actian Vortex and Tableu Desktop to showcase and end-to-end streaming use case](tutorials/streaming-demo/README.md)
+1. [Spark Demo - Uses Spark and Vortex](tutorials/spark-demo/README.md) 
 
 

@@ -1,9 +1,10 @@
+- [Twitter Streaming Demo](#Overview)
+- [Requirements] (#Requirements)
+- 
 
 # Twitter Streaming Demo
 
 The Twitter Streaming Demo pulls in live Twitter feeds and pushes them out to Apache Kafka. Actian DataFlow picks up these messages from Kafka every few seconds, enriches them, and stores the result in Actian Vector in Hadoop (hereafter Vector-H). The stored data can then be analyzed using various tools.
-
-- [Requirements](#Requirements)
 
 ## Requirements
 

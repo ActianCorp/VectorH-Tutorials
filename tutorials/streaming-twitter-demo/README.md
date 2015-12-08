@@ -1,31 +1,83 @@
-## Tutorial: Streaming Demo - Using Twitter and Kafka to stream all tweets containing specified keywords into Vector H database.
+#Twitter Streaming Demo
 
-The tutorial is presented in sections as listed below.
+The Twitter Streaming Demo pulls in live Twitter feeds and pushes them out to Apache Kafka. Actian DataFlow picks up these messages from Kafka every few seconds, enriches them, and stores the result in Actian Vector in Hadoop (hereafter Vector-H). The stored data can then be analyzed using various tools.
 
-- [Overview of Vector H](#overview)
-- [Download locations](#download)
-- [Installation instructions](#installation)
-- [Prerequisites for this Tutorial](#prereqs)
-- [Tutorial Installation Instructions](#tutorial)
+##Requirements
 
-### Overview of Vector H
+The demo requires the following software installed on your system:
 
-Actian Vortex includes the following capabilities:
+> NOTE: If you provisioned Actian Vortex through the Actian Management Console
+> (AMC) and selected the Twitter demo option at the provision screen,
+> all these components (except the Twitter Dev Access Token) are already
+> installed.
 
-- Analytics Workbench - quickly build visual workflows to prepare, blend, and analyze Hadoop data 
-- Data Flow Engine - execute analytic workflows 10x+ faster than MapReduce, without coding
-- Analytics Database - run SQL queries natively in Hadoop against Terabytes of data in seconds
+ - Actian Vector-H, which was installed with Vortex
+ - Apache Kafka Server process (also known as a broker) on the Vector-H master node. You can usually check this through your Hadoop provider's management interface (for example, Apache Ambari in the case of Hortonworks Data Platform).
+ - zip utility (can be installed through yum install zip as root)
+ - Tweepy, a Twitter library for Python (can be installed with pip install tweepy)
+ - A Twitter Dev Access Token (see the following section)
 
-We’ve taken our record-breaking vector-based columnar analytics database and extended it to run natively on the Hadoop HDFS nodes using YARN for resource management.   
+There might be some other packages required and the demo start script will make the necessary checks and prompt you in case something else needs to be installed.
 
-### Download locations
+###Obtaining and Using a Twitter Dev Access Token
 
-Download and try Actian Vortex for free at [actian.com](http://bigdata.actian.com/sql-in-hadoop).
+Pulling in live data from Twitter requires a Twitter Dev Access Token, which consists of four required values. To obtain the token, you must have a Twitter account. To obtain the token:
 
-### Installation Instructions
+ 
 
-Installation instructions can be found at [docs.actian.com](http://docs.actian.com/?aspectfilter=Version_Vector|Vector%204.2%20Hadoop|Version_Analytics|Express%20Hadoop%20SQL%202.0#b78641t75762n/s-1/s6760/s6762/s6762b406798)
+ 1. Go to https://apps.twitter.com and sign in with your Twitter account.
+You are logged in. 
+ 2. Click "Create an app". 
+The Create an application page is displayed.
+ 3. Fill in the details for the application, including the following:
+- Name: Give your application a unique name.
+- Description: A short description.
+- Web Site: Your web site (you can also use a placeholder).
+- Callback URL: Leave blank
 
-### Prerequisites for this Tutorial
+ Accept the agreement, and then click "Create your Twitter application".
+The application page is displayed. 
+ 4. Select the "Keys and Access Tokens" tab. 
+ 5. Scroll down and click "Create my access token".
+The token is created. 
+ 6. Note the following four fields and their values. You will need these values for the demo to run.
+ - Consumer Key
+ - Consumer Secret
+ - Access Token
+ - Access Token Secret
 
-### Tutorial Installation Instructions
+The authentication credentials are set up. We now need to update the demo to use the access token. 
+
+###To use the token
+
+1.	Log in to the Vector-H master node as user actian, using the password you chose at installation time.
+2.	Switch to the demo directory: 
+> cd /opt/Actian/Vortex/demos/streaming_twitter_demo/
+
+3.	Open the twitterAuth.py file with your favorite editor and update it with the four values of the token from your newly created Twitter application. Save the changes and quit the editor. 
+
+You are now ready to start the demo.
+
+##Specifying Tweet Categories
+
+To control the amount of data, tweets from specific categories are pulled in. The default categories are "bigdata" and "hadoop". If you are interested in other categories, you can edit the file topics.txt and add a new line for each topic that you are interested in. 
+
+> NOTE: You can edit this file while the demo is running; the topics will be
+> picked up or removed dynamically
+
+##Starting and Stopping the Demo
+
+###To start the demo
+Execute the start demo script as user actian: 
+
+> ./start_demo.sh.
+
+The database and tables are created and the necessary processes are started. 
+
+###To stop the demo
+
+Execute the stop demo script as user actian: 
+
+> ./stop_demo.sh.
+
+The demo stops after a few seconds.

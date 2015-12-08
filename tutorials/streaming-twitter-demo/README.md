@@ -81,3 +81,31 @@ Execute the stop demo script as user actian:
 > ./stop_demo.sh.
 
 The demo stops after a few seconds.
+
+##Viewing the data
+The processed tweets are stored in a table called tweets in the database stream. 
+
+To quickly check if the data is being stored 
+
+1.	Start the demo.
+2.	Source the actian environment: 
+
+> source /home/actian/.ingVHsh
+
+3.	Start the SQL terminal monitor to get a stored tweets summary: 
+
+> sql -udemo stream <
+> /opt/Actian/Vortex/demos/streaming_twitter_demo/dataflow_workflows/count.sql
+
+The row count should be steadily increasing.
+##Visualizing the Data
+Visualizing the data makes it easier to look at the tweets and identify tweet trends. The demo comes with a pre-built Tableau workbook that contains a dashboard to visualize all the stored information.  
+
+To visualize the data
+
+1.	Open the provided Tableau workbook using Tableau Desktop.
+Tableau displays a dashboard, which is based on the Twitter data stored in Vector in Hadoop. 
+2.	Refresh the dashboard to change the visualization. 
+3.	Click a category in the dashboard to filter the other views based on that category.
+
+Tweet something in the category you are monitoring and it should appear on the dashboard in a few seconds!

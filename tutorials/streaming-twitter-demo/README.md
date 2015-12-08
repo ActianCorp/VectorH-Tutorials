@@ -30,10 +30,8 @@ There might be some other packages required and the demo start script will make 
 
 Pulling in live data from Twitter requires a Twitter Dev Access Token, which consists of four required values. To obtain the token, you must have a Twitter account. To obtain the token:
  
- 1. Go to https://apps.twitter.com and sign in with your Twitter account.
-You are logged in. 
- 2. Click "Create an app". 
-The Create an application page is displayed.
+ 1. Go to https://apps.twitter.com and sign in with your Twitter account. You are logged in. 
+ 2. Click "Create an app". The Create an application page is displayed.
  3. Fill in the details for the application, including the following:
 - Name: Give your application a unique name.
 - Description: A short description.

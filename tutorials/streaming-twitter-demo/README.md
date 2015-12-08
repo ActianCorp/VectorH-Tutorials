@@ -1,8 +1,11 @@
-#Twitter Streaming Demo
+
+# Twitter Streaming Demo
 
 The Twitter Streaming Demo pulls in live Twitter feeds and pushes them out to Apache Kafka. Actian DataFlow picks up these messages from Kafka every few seconds, enriches them, and stores the result in Actian Vector in Hadoop (hereafter Vector-H). The stored data can then be analyzed using various tools.
 
-##Requirements
+- [Requirements](#Requirements)
+
+## Requirements
 
 The demo requires the following software installed on your system:
 
@@ -19,12 +22,10 @@ The demo requires the following software installed on your system:
 
 There might be some other packages required and the demo start script will make the necessary checks and prompt you in case something else needs to be installed.
 
-###Obtaining and Using a Twitter Dev Access Token
+### Obtaining and Using a Twitter Dev Access Token
 
 Pulling in live data from Twitter requires a Twitter Dev Access Token, which consists of four required values. To obtain the token, you must have a Twitter account. To obtain the token:
-
  
-
  1. Go to https://apps.twitter.com and sign in with your Twitter account.
 You are logged in. 
  2. Click "Create an app". 
@@ -48,7 +49,7 @@ The token is created.
 
 The authentication credentials are set up. We now need to update the demo to use the access token. 
 
-###To use the token
+### To use the token
 
 1.	Log in to the Vector-H master node as user actian, using the password you chose at installation time.
 2.	Switch to the demo directory: 
@@ -58,23 +59,23 @@ The authentication credentials are set up. We now need to update the demo to use
 
 You are now ready to start the demo.
 
-##Specifying Tweet Categories
+## Specifying Tweet Categories
 
 To control the amount of data, tweets from specific categories are pulled in. The default categories are "bigdata" and "hadoop". If you are interested in other categories, you can edit the file topics.txt and add a new line for each topic that you are interested in. 
 
 > NOTE: You can edit this file while the demo is running; the topics will be
 > picked up or removed dynamically
 
-##Starting and Stopping the Demo
+## Starting and Stopping the Demo
 
-###To start the demo
+### To start the demo
 Execute the start demo script as user actian: 
 
 > ./start_demo.sh.
 
 The database and tables are created and the necessary processes are started. 
 
-###To stop the demo
+### To stop the demo
 
 Execute the stop demo script as user actian: 
 
@@ -82,7 +83,7 @@ Execute the stop demo script as user actian:
 
 The demo stops after a few seconds.
 
-##Viewing the data
+## Viewing the data
 The processed tweets are stored in a table called tweets in the database stream. 
 
 To quickly check if the data is being stored 
@@ -98,7 +99,7 @@ To quickly check if the data is being stored
 > /opt/Actian/Vortex/demos/streaming_twitter_demo/dataflow_workflows/count.sql
 
 The row count should be steadily increasing.
-##Visualizing the Data
+## Visualizing the Data
 Visualizing the data makes it easier to look at the tweets and identify tweet trends. The demo comes with a pre-built Tableau workbook that contains a dashboard to visualize all the stored information.  
 
 To visualize the data

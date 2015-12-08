@@ -1,6 +1,9 @@
 - [Twitter Streaming Demo](#Overview)
-- [Requirements] (#Requirements)
-- 
+- [Requirements](#Requirements)
+- [Specifying Tweet Categories](#Specifying Tweet Categories)
+- [Starting/Stopping the demo]
+- [Viewing the data] (#Viewing the data)
+- []
 
 # Twitter Streaming Demo
 

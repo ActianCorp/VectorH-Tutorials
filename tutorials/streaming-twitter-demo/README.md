@@ -12,7 +12,7 @@ The tutorial is presented in sections as listed below.
 
 Actian Vortex includes the following capabilities:
 
-- Analytics Workbench - quickly build visual workflows to prepare, blend, and analyze Hadoop data
+- Analytics Workbench - quickly build visual workflows to prepare, blend, and analyze Hadoop data 
 - Data Flow Engine - execute analytic workflows 10x+ faster than MapReduce, without coding
 - Analytics Database - run SQL queries natively in Hadoop against Terabytes of data in seconds
 

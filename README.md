@@ -1,7 +1,7 @@
 #Vortex Tutorials
-This repository features a collection of Vortex Tutorials showcasing various capabilities related to Use Cases, Analytics, Administration, Tuning and etc.
+This repository features a collection of VectorH Tutorials showcasing useful how-tos with respect to VectorH. This is a growing list and you are encourage to look at the table of contents to help to find the right content.
 
-![Actian Vortex](http://wwwcdn2.actian.com/wp-content/uploads/2015/03/vortex-img.jpg)
+![Actian Analytics Platform](http://wwwcdn2.actian.com/wp-content/uploads/2015/03/vortex-img.jpg)
 
 
 Current tutorials are as follows:

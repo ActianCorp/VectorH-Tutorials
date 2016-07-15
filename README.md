@@ -1,4 +1,4 @@
-#Vortex Tutorials
+#VectorH Tutorials
 This repository features a collection of VectorH Tutorials showcasing useful how-tos with respect to VectorH. This is a growing list and you are encourage to look at the table of contents to help to find the right content.
 
 ![Actian Analytics Platform](http://wwwcdn2.actian.com/wp-content/uploads/2015/03/vortex-img.jpg)

@@ -1,4 +1,4 @@
-product_id,time_id,customer_id,promotion_id,store_id, store_sales, store_cost, unit_sales
+product_id,time_id,customer_id,promotion_id,store_id,store_sales,store_cost,unit_sales
 337,371,6280,0,2,1.5,0.51,2
 1512,371,6280,0,2,1.62,0.632,3
 963,371,4018,0,2,2.4,0.72,1
